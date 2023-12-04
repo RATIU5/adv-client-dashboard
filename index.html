@@ -133,50 +133,7 @@
         </div>
     </div>
     <script>
-        // Functions
-        function getTimeGreeting() {
-            const hours = 10;
-            if (hours < 5) return 'Night';
-            if (hours < 12) return 'Morning';
-            if (hours < 18) return 'Afternoon';
-            return 'Evening';
-        }
 
-        // Turnary if statement
-        function getCurrentTime() {
-            const hours = 10;
-            const minutes = 30;
-            return `${pad(hours)}:${pad(minutes)} ${hours >= 12 ? 'PM' : 'AM'}`;
-        }
-
-        // String methods
-        function pad(number) {
-            return number.toString().padStart(2, '0');
-        }
-
-        // Data Structures
-        function getMonthWord(monthNumber) {
-            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            return months[monthNumber - 1] || 'undefined';
-        }
-
-        // Calling function in function
-        function getCurrentDate() {
-            const day = 1;
-            const month = 3;
-            const year = 2023;
-            return `${getMonthWord(month)} ${day}, ${year}`;
-        }
-
-        // Select elements from the DOM
-        const timeGreetingElement = document.getElementById("time-greeting");
-        const timeElement = document.querySelector(".info-time h3");
-        const dateElement = document.querySelector(".info-time p");
-
-        // Update elements in the DOM
-        timeGreetingElement.textContent = `Good ${getTimeGreeting()}, John`;
-        timeElement.textContent = getCurrentTime();
-        dateElement.textContent = getCurrentDate();
     </script>
 </body>
 
